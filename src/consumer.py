@@ -16,7 +16,7 @@ class ProductConsumer(object):
 
 
 class Product(object):
-    def __init__(self, id, type, name ):
+    def __init__(self, id, type, name):
         self.id = id
         self.type = type
         self.name = name
