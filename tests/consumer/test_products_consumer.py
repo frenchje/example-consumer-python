@@ -41,11 +41,15 @@ def pact(request):
         print('stop service')
         pact.stop_service()
 
+
 def test_get_product(pact, consumer):
     expected = {
         'id': "27",
         'name': 'Margharita',
-        'type': 'Pizza'
+        'type': 'Pizza',
+        'updated_by': 'Random User',
+        'new_required_field': 'Some Data',
+        'some_other_new_required_field': 'New field data',
     }
 
     (pact

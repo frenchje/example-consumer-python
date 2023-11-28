@@ -12,11 +12,13 @@ class ProductConsumer(object):
             return None
 
         json = response.json()
-        return Product(json['id'], json['type'], json['name'])
+        return Product(json['id'], json['type'], json['name'], json['updated_by'], json['new_required_field'])
 
 
 class Product(object):
-    def __init__(self, id, type, name):
+    def __init__(self, id, type, name, updated_by, new_required_field):
         self.id = id
         self.type = type
         self.name = name
+        self.updated_by = updated_by
+        self.new_required_filed = new_required_field
